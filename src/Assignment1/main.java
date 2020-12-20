@@ -5,7 +5,7 @@ public class main {
     public static void main(String[] args){
         
         
-        //Type of aerobic
+        //Choose Type of aerobic
         AtHomeAerobic H = new AtHomeAerobic();
         AtGymAerobic G = new AtGymAerobic();
         

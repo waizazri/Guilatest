@@ -5,13 +5,15 @@ public class ChooseTypeofAerobic {
     
 }
 class AtHomeAerobic{
-    String TypeAerobic1, benefits1, benefits2;
+    String TypeAerobic1, benefits1, benefits2, equipment1, equipment2;
     public void AtHomeAerobic1(){
-    this.TypeAerobic1=" At Home Aerobic that will included: Jump rope, Aerobic strength circuit & many more";
-    this.benefits1="Jumping rope helps develop better body awareness, hand-foot coordination, and agility.";
-    this.benefits2=" and This exercise increases heart and cardiovascular health, builds up strength, and tones major muscle groups.";
-        
-    System.out.println("You will learn about "+TypeAerobic1+" also you the benefit you will get is "+benefits1+benefits2);
+    this.TypeAerobic1=" At Home Aerobic that will included: Jump rope, Aerobic \nstrength circuit & many more";
+    this.benefits1="Jumping rope helps develop better \nbody awareness, hand-foot coordination, and agility. \n";
+    this.benefits2="and this exercise increases heart and cardiovascular health, builds up strength, and tones major muscle groups. \n";
+    this.equipment1="gym shoes (sneakers), jump rope and \n";
+    this.equipment2="sturdy chair or couch for dips. \n";
+    System.out.println("You will learn about "+TypeAerobic1+" also the benefit you will get is "+benefits1+benefits2);
+    System.out.println("The equipment you need is "+equipment1+equipment2);
         
     }
 }
