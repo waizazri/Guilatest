@@ -1,7 +1,7 @@
 
 package Assignment1;
 
-public class main {
+public class main extends ChooseTypeofAerobic {
     public static void main(String[] args){
         
         System.out.println("Welcome to the AerobicDotMy service Register System,\nPlease put your name and choose type of aerobic you want \nalso if you want to know about each of aerobic just type for example: swimming and s.swimming ");

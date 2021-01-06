@@ -1,8 +1,10 @@
 
 package Assignment1;
 
-public class ChooseTypeofAerobic {
-    
+//this is my abstract
+abstract public class ChooseTypeofAerobic {
+ 
+    //This is my polymorphisim Part
 }
 class AtHomeAerobic1{
     String TypeAerobic;

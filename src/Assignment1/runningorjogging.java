@@ -9,7 +9,7 @@ package Assignment1;
  *
  * @author USER
  */
-public class runningorjogging extends AtHomeAerobic1 {
+ public class runningorjogging extends AtHomeAerobic1 {
     String equipment, benefits, safety, about;
     String duration, frequency;
     
