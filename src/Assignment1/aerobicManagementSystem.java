@@ -5,10 +5,15 @@
  */
 package Assignment1;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -28,7 +33,7 @@ public class aerobicManagementSystem extends javax.swing.JFrame {
     public aerobicManagementSystem() {
         initComponents();
         dateTF.setText(" "+ dateFormat.format(date));
-        
+        JOptionPane.showMessageDialog(rootPane,"Welcome to Aerobic Management System, press 'OK' to start the System");
     }
 
     /**
@@ -240,7 +245,7 @@ public class aerobicManagementSystem extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(lastnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(ageTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -284,13 +289,17 @@ public class aerobicManagementSystem extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void firstnameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameTFActionPerformed
-        // TODO add your handling code here:
+            // TODO add your handling code here:
+           
     }//GEN-LAST:event_firstnameTFActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         DefaultTableModel model;
         model = (DefaultTableModel) table.getModel();
         
+        //Assignment 3: ' EXCEPTION' TRY CATCH for Age Number only..
+        try{
+        int int1 = Integer.parseInt(ageTF.getText());
         model.addRow(new Object[]{
         firstnameTF.getText(),
         lastnameTF.getText(),
@@ -300,6 +309,10 @@ public class aerobicManagementSystem extends javax.swing.JFrame {
         ageTF.getText(),
         dateTF.getText(),
         });        // TODO add your handling code here:
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(rootPane,"Please enter Age using number only");
+            
+        }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
@@ -363,6 +376,7 @@ public class aerobicManagementSystem extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new aerobicManagementSystem().setVisible(true);
             }
